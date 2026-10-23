@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>파주의 셰한공간</title>
+    <link rel="stylesheet" href="style.css"> <!--html과 css 연결-->
+</head>
+<body>
+    <!-- 페이지 다섯 개를 html 하나로 합쳤다. 구역(section)마다 id를 붙이고,
+         길잡이의 링크(href="#id")를 누르면 그 구역으로 내려간다 -->
+    <nav class="giljabi">
+        <a href="#cheot" class="jemok">파주의 셰한공간</a>
+        <a href="#mun">문</a>
+        <a href="#bokdo">복도</a>
+        <a href="#gyedan">계단</a>
+        <a href="#juchajang">지하주차장</a>
+        <a href="#noriteo">멈춘 놀이터</a>
+    </nav>
+
+    <!-- ============================== 첫 화면 ============================== -->
+    <section id="cheot" class="cheot">
+        <h1>파주의 셰한공간</h1>
+        <a href="#mun">
+            <div class="ipgu" style="width: 404px; height: 560px;">
+                <img src="img/153.jpg" style="width: 878px; left: -264px; top: -66px;">
+            </div>
+        </a>
+        <p class="annae">문을 누르면 들어갑니다</p>
+
+        <!-- 들어서고, 지나고, 머물고, 빠져나오는 순서 -->
+        <ol class="mokcha">
+                <li><a href="#mun">1. 문</a></li>
+                <li><a href="#bokdo">2. 복도</a></li>
+                <li><a href="#gyedan">3. 계단</a></li>
+                <li><a href="#juchajang">4. 지하주차장</a></li>
+                <li><a href="#noriteo">5. 멈춘 놀이터</a></li>
+        </ol>
+    </section>
+
+    <!-- ============================== 문 ============================== -->
+    <section id="mun" class="p-mun">
+        <!-- 이 페이지의 방식: 잘라내기 — 사진에서 문이 있는 부분만 잘라 낸다. 문을 누르면 다음 문이 나온다 -->
+        <!-- 넘김 (js 없이 html·css만)
+             - 장면마다 바로 앞에 동그라미 선택 버튼(input type="radio")을 하나씩 둔다. 버튼은 css로 숨긴다.
+             - 장면 자체를 label로 만들고, for에 "다음 장면의 버튼 id"를 적는다.
+               → 장면을 누르면 다음 버튼이 선택되고, css의 input:checked + .jang 규칙이 다음 장면을 보여 준다.
+             - 마지막 장면만 label 대신 a(링크)로 만들어서, 누르면 다음 페이지로 간다. -->
+        <main class="neomgim">
+            <input type="radio" name="mun" id="mun1" checked>
+            <label class="jang mun" for="mun2" style="width: 636px; height: 520px;">
+                <img src="img/042.jpg" style="width: 1444px; left: -433px; top: -325px;">
+            </label>
+            <span class="beonho">문 1 / 10</span>
+            <input type="radio" name="mun" id="mun2">
+            <label class="jang mun" for="mun3" style="width: 327px; height: 520px;">
+                <img src="img/051.jpg" style="width: 963px; left: -366px; top: -144px;">
+            </label>
+            <span class="beonho">문 2 / 10</span>
+            <input type="radio" name="mun" id="mun3">
+            <label class="jang mun" for="mun4" style="width: 277px; height: 520px;">
+                <img src="img/052.jpg" style="width: 867px; left: -399px; top: -78px;">
+            </label>
+            <span class="beonho">문 3 / 10</span>
+            <input type="radio" name="mun" id="mun4">
+            <label class="jang mun" for="mun5" style="width: 242px; height: 520px;">
+                <img src="img/094.jpg" style="width: 806px; left: -97px; top: -73px;">
+            </label>
+            <span class="beonho">문 4 / 10</span>
+            <input type="radio" name="mun" id="mun5">
+            <label class="jang mun" for="mun6" style="width: 433px; height: 520px;">
+                <img src="img/108.jpg" style="width: 722px; left: -144px; top: -11px;">
+            </label>
+            <span class="beonho">문 5 / 10</span>
+            <input type="radio" name="mun" id="mun6">
+            <label class="jang mun" for="mun7" style="width: 533px; height: 520px;">
+                <img src="img/179.jpg" style="width: 1067px; left: -192px; top: -88px;">
+            </label>
+            <span class="beonho">문 6 / 10</span>
+            <input type="radio" name="mun" id="mun7">
+            <label class="jang mun" for="mun8" style="width: 391px; height: 520px;">
+                <img src="img/090.jpg" style="width: 1261px; left: -529px; top: -265px;">
+            </label>
+            <span class="beonho">문 7 / 10</span>
+            <input type="radio" name="mun" id="mun8">
+            <label class="jang mun" for="mun9" style="width: 228px; height: 520px;">
+                <img src="img/157.jpg" style="width: 878px; left: -316px; top: -46px;">
+            </label>
+            <span class="beonho">문 8 / 10</span>
+            <input type="radio" name="mun" id="mun9">
+            <label class="jang mun" for="mun10" style="width: 264px; height: 520px;">
+                <img src="img/198.jpg" style="width: 1101px; left: -550px; top: -206px;">
+            </label>
+            <span class="beonho">문 9 / 10</span>
+            <input type="radio" name="mun" id="mun10">
+            <a class="jang mun" href="#bokdo" style="width: 273px; height: 520px;">
+                <img src="img/153.jpg" style="width: 1051px; left: -420px; top: -165px;">
+            </a>
+            <span class="beonho">문 10 / 10</span>
+        </main>
+
+    </section>
+    <!-- ============================== 복도 ============================== -->
+    <section id="bokdo" class="p-bokdo">
+        <!-- 이 페이지의 방식: 덜어내기 — 복도 사진 위에 흰 네모와 동그라미를 얹어 포스터, 표지판, 소화기, 조명 같은 사물을 지우고 복도의 형태만 남긴다. 아래로 내리면 가린 것들만 모아 놓았다 -->
+        <!-- class="jangmyeon"(장면) 안에 사진 한 장과 흰 도형들을 겹쳐 놓는다.
+             도형 위치(left, top)와 크기(width, height)를 %로 적어서, 화면 크기가 바뀌어도 사진의 같은 자리를 가린다.
+             class="nemo"(네모), class="dong"(동그라미) -->
+        <main>
+            <div class="geurid">
+            <div class="jangmyeon">
+                <img src="img/006.jpg">
+                <span class="nemo" style="left: 12%; top: 19%; width: 16%; height: 58%;"></span>
+                <span class="nemo" style="left: 30.5%; top: 30%; width: 3%; height: 8.5%;"></span>
+                <span class="nemo" style="left: 51%; top: 31%; width: 2.5%; height: 7.5%;"></span>
+                <span class="nemo" style="left: 55.5%; top: 20%; width: 4%; height: 15%;"></span>
+            </div>
+            <div class="jangmyeon">
+                <img src="img/058.jpg">
+                <span class="nemo" style="left: 0%; top: 7%; width: 18%; height: 73%;"></span>
+                <span class="nemo" style="left: 33%; top: 23%; width: 5.5%; height: 33%;"></span>
+                <span class="nemo" style="left: 43%; top: 29%; width: 3.5%; height: 22%;"></span>
+                <span class="nemo" style="left: 73%; top: 8%; width: 6.5%; height: 84%;"></span>
+                <span class="dong" style="left: 60.5%; top: 43%; width: 2.5%; height: 9%;"></span>
+            </div>
+            <div class="jangmyeon">
+                <img src="img/068.jpg">
+                <span class="dong" style="left: 21.5%; top: 9.5%; width: 6%; height: 4%;"></span>
+                <span class="dong" style="left: 56%; top: 8%; width: 7%; height: 4.5%;"></span>
+                <span class="dong" style="left: 92.5%; top: 6.5%; width: 5%; height: 4%;"></span>
+                <span class="nemo" style="left: 87%; top: 25%; width: 10%; height: 35%;"></span>
+            </div>
+            <div class="jangmyeon">
+                <img src="img/040.jpg">
+                <span class="nemo" style="left: 9.5%; top: 21%; width: 5.5%; height: 9%;"></span>
+                <span class="nemo" style="left: 17.5%; top: 2.5%; width: 13.5%; height: 97.5%;"></span>
+                <span class="dong" style="left: 53%; top: 23%; width: 4.5%; height: 4.5%;"></span>
+                <span class="nemo" style="left: 70.5%; top: 73%; width: 5.5%; height: 16%;"></span>
+                <span class="nemo" style="left: 84%; top: 2%; width: 16%; height: 90%;"></span>
+            </div>
+            <div class="jangmyeon">
+                <img src="img/036.jpg">
+                <span class="nemo" style="left: 79%; top: 43%; width: 16%; height: 57%;"></span>
+                <span class="nemo" style="left: 64%; top: 25%; width: 5%; height: 6%;"></span>
+                <span class="dong" style="left: 47%; top: 15%; width: 3%; height: 4%;"></span>
+            </div>
+            <div class="jangmyeon">
+                <img src="img/098.jpg">
+                <span class="nemo" style="left: 30%; top: 71%; width: 6%; height: 16%;"></span>
+                <span class="nemo" style="left: 40%; top: 52%; width: 2.5%; height: 7%;"></span>
+                <span class="nemo" style="left: 31.5%; top: 16%; width: 5.5%; height: 43%;"></span>
+                <span class="dong" style="left: 42%; top: 8.5%; width: 4%; height: 3.5%;"></span>
+            </div>
+            <div class="jangmyeon">
+                <img src="img/136.jpg">
+                <span class="nemo" style="left: 0%; top: 41%; width: 38%; height: 9.5%;"></span>
+                <span class="nemo" style="left: 62%; top: 41%; width: 38%; height: 9.5%;"></span>
+                <span class="nemo" style="left: 10%; top: 17%; width: 28%; height: 23%;"></span>
+                <span class="nemo" style="left: 42%; top: 50%; width: 5%; height: 12%;"></span>
+            </div>
+            <div class="jangmyeon">
+                <img src="img/138.jpg">
+                <span class="nemo" style="left: 39.5%; top: 50%; width: 5%; height: 11%;"></span>
+                <span class="dong" style="left: 55%; top: 33%; width: 16%; height: 30%;"></span>
+                <span class="dong" style="left: 80%; top: 35%; width: 8%; height: 13%;"></span>
+                <span class="dong" style="left: 89%; top: 48%; width: 11%; height: 15%;"></span>
+            </div>
+            </div>
+
+            <!-- 가린 것들: 네모로 가린 것은 네모로, 동그라미로 가린 것은 동그라미(class="gureum")로 오려 모은다 -->
+            <section class="garin">
+                <h2>가린 것들 · 33</h2>
+                <div class="garin-moeum">
+                <div class="jogak" style="width: 122px; height: 331px;">
+                    <img src="img/006.jpg" style="width: 760px; left: -91px; top: -108px;">
+                </div>
+                <div class="jogak" style="width: 23px; height: 48px;">
+                    <img src="img/006.jpg" style="width: 760px; left: -232px; top: -171px;">
+                </div>
+                <div class="jogak" style="width: 19px; height: 43px;">
+                    <img src="img/006.jpg" style="width: 760px; left: -388px; top: -177px;">
+                </div>
+                <div class="jogak" style="width: 30px; height: 86px;">
+                    <img src="img/006.jpg" style="width: 760px; left: -422px; top: -114px;">
+                </div>
+                <div class="jogak" style="width: 137px; height: 416px;">
+                    <img src="img/058.jpg" style="width: 760px; left: 0px; top: -40px;">
+                </div>
+                <div class="jogak" style="width: 42px; height: 188px;">
+                    <img src="img/058.jpg" style="width: 760px; left: -251px; top: -131px;">
+                </div>
+                <div class="jogak" style="width: 27px; height: 125px;">
+                    <img src="img/058.jpg" style="width: 760px; left: -327px; top: -165px;">
+                </div>
+                <div class="jogak" style="width: 49px; height: 479px;">
+                    <img src="img/058.jpg" style="width: 760px; left: -555px; top: -46px;">
+                </div>
+                <div class="jogak gureum" style="width: 19px; height: 51px;">
+                    <img src="img/058.jpg" style="width: 760px; left: -460px; top: -245px;">
+                </div>
+                <div class="jogak gureum" style="width: 46px; height: 23px;">
+                    <img src="img/068.jpg" style="width: 760px; left: -163px; top: -54px;">
+                </div>
+                <div class="jogak gureum" style="width: 53px; height: 26px;">
+                    <img src="img/068.jpg" style="width: 760px; left: -426px; top: -46px;">
+                </div>
+                <div class="jogak gureum" style="width: 38px; height: 23px;">
+                    <img src="img/068.jpg" style="width: 760px; left: -703px; top: -37px;">
+                </div>
+                <div class="jogak" style="width: 76px; height: 200px;">
+                    <img src="img/068.jpg" style="width: 760px; left: -661px; top: -142px;">
+                </div>
+                <div class="jogak" style="width: 42px; height: 51px;">
+                    <img src="img/040.jpg" style="width: 760px; left: -72px; top: -120px;">
+                </div>
+                <div class="jogak" style="width: 103px; height: 556px;">
+                    <img src="img/040.jpg" style="width: 760px; left: -133px; top: -14px;">
+                </div>
+                <div class="jogak gureum" style="width: 34px; height: 26px;">
+                    <img src="img/040.jpg" style="width: 760px; left: -403px; top: -131px;">
+                </div>
+                <div class="jogak" style="width: 42px; height: 91px;">
+                    <img src="img/040.jpg" style="width: 760px; left: -536px; top: -416px;">
+                </div>
+                <div class="jogak" style="width: 122px; height: 513px;">
+                    <img src="img/040.jpg" style="width: 760px; left: -638px; top: -11px;">
+                </div>
+                <div class="jogak" style="width: 122px; height: 325px;">
+                    <img src="img/036.jpg" style="width: 760px; left: -600px; top: -245px;">
+                </div>
+                <div class="jogak" style="width: 38px; height: 34px;">
+                    <img src="img/036.jpg" style="width: 760px; left: -486px; top: -143px;">
+                </div>
+                <div class="jogak gureum" style="width: 23px; height: 23px;">
+                    <img src="img/036.jpg" style="width: 760px; left: -357px; top: -85px;">
+                </div>
+                <div class="jogak" style="width: 46px; height: 91px;">
+                    <img src="img/098.jpg" style="width: 760px; left: -228px; top: -405px;">
+                </div>
+                <div class="jogak" style="width: 19px; height: 40px;">
+                    <img src="img/098.jpg" style="width: 760px; left: -304px; top: -296px;">
+                </div>
+                <div class="jogak" style="width: 42px; height: 245px;">
+                    <img src="img/098.jpg" style="width: 760px; left: -239px; top: -91px;">
+                </div>
+                <div class="jogak gureum" style="width: 30px; height: 20px;">
+                    <img src="img/098.jpg" style="width: 760px; left: -319px; top: -48px;">
+                </div>
+                <div class="jogak" style="width: 289px; height: 54px;">
+                    <img src="img/136.jpg" style="width: 760px; left: 0px; top: -234px;">
+                </div>
+                <div class="jogak" style="width: 289px; height: 54px;">
+                    <img src="img/136.jpg" style="width: 760px; left: -471px; top: -234px;">
+                </div>
+                <div class="jogak" style="width: 213px; height: 131px;">
+                    <img src="img/136.jpg" style="width: 760px; left: -76px; top: -97px;">
+                </div>
+                <div class="jogak" style="width: 38px; height: 68px;">
+                    <img src="img/136.jpg" style="width: 760px; left: -319px; top: -285px;">
+                </div>
+                <div class="jogak" style="width: 38px; height: 63px;">
+                    <img src="img/138.jpg" style="width: 760px; left: -300px; top: -285px;">
+                </div>
+                <div class="jogak gureum" style="width: 122px; height: 171px;">
+                    <img src="img/138.jpg" style="width: 760px; left: -418px; top: -188px;">
+                </div>
+                <div class="jogak gureum" style="width: 61px; height: 74px;">
+                    <img src="img/138.jpg" style="width: 760px; left: -608px; top: -199px;">
+                </div>
+                <div class="jogak gureum" style="width: 84px; height: 86px;">
+                    <img src="img/138.jpg" style="width: 760px; left: -676px; top: -274px;">
+                </div>
+                </div>
+            </section>
+        </main>
+
+    </section>
+    <!-- ============================== 계단 ============================== -->
+    <section id="gyedan" class="p-gyedan">
+        <!-- 이 페이지의 방식: 덜어내기 — 계단 사진 위에 흰 네모와 동그라미를 얹어 문, 소화기, 창문, 표지판, 조명 같은 사물을 지우고 계단의 형태만 남긴다. 아래로 내리면 가린 것들만 모아 놓았다 -->
+        <!-- class="jangmyeon"(장면) 안에 사진 한 장과 흰 도형들을 겹쳐 놓는다.
+             도형 위치(left, top)와 크기(width, height)를 %로 적어서, 화면 크기가 바뀌어도 사진의 같은 자리를 가린다.
+             class="nemo"(네모), class="dong"(동그라미) -->
+        <main>
+            <div class="geurid">
+            <div class="jangmyeon">
+                <img src="img/096.jpg">
+                <span class="nemo" style="left: 42%; top: 9%; width: 21%; height: 41%;"></span>
+                <span class="nemo" style="left: 62%; top: 43%; width: 5.5%; height: 12%;"></span>
+                <span class="nemo" style="left: 63.5%; top: 37%; width: 5%; height: 5.5%;"></span>
+            </div>
+            <div class="jangmyeon">
+                <img src="img/177.jpg">
+                <span class="nemo" style="left: 36.5%; top: 35%; width: 15.5%; height: 39%;"></span>
+                <span class="nemo" style="left: 18%; top: 19%; width: 9.5%; height: 39%;"></span>
+                <span class="nemo" style="left: 9.5%; top: 44.5%; width: 4%; height: 8.5%;"></span>
+                <span class="nemo" style="left: 19%; top: 88%; width: 29%; height: 12%;"></span>
+            </div>
+            <div class="jangmyeon">
+                <img src="img/062.jpg">
+                <span class="nemo" style="left: 39.5%; top: 38%; width: 7%; height: 10%;"></span>
+                <span class="nemo" style="left: 59%; top: 32%; width: 8.5%; height: 42%;"></span>
+            </div>
+            <div class="jangmyeon">
+                <img src="img/182.jpg">
+                <span class="nemo" style="left: 19%; top: 15%; width: 13.5%; height: 38%;"></span>
+                <span class="nemo" style="left: 9.5%; top: 72%; width: 5%; height: 5.5%;"></span>
+            </div>
+            <div class="jangmyeon">
+                <img src="img/035.jpg">
+                <span class="nemo" style="left: 36%; top: 15%; width: 10.5%; height: 27%;"></span>
+                <span class="nemo" style="left: 19%; top: 70%; width: 14%; height: 30%;"></span>
+                <span class="dong" style="left: 44%; top: 4%; width: 4%; height: 4%;"></span>
+            </div>
+            <div class="jangmyeon">
+                <img src="img/009.jpg">
+                <span class="nemo" style="left: 45.5%; top: 33%; width: 9%; height: 50%;"></span>
+                <span class="dong" style="left: 47.5%; top: 11%; width: 4%; height: 4%;"></span>
+                <span class="dong" style="left: 83.5%; top: 8.5%; width: 4.5%; height: 4%;"></span>
+            </div>
+            <div class="jangmyeon">
+                <img src="img/169.jpg">
+                <span class="nemo" style="left: 68.5%; top: 34%; width: 5%; height: 22%;"></span>
+                <span class="nemo" style="left: 90.5%; top: 50.5%; width: 3%; height: 6%;"></span>
+                <span class="dong" style="left: 25.5%; top: 9%; width: 3.5%; height: 4%;"></span>
+                <span class="dong" style="left: 36.5%; top: 9%; width: 3.5%; height: 4%;"></span>
+            </div>
+            <div class="jangmyeon">
+                <img src="img/089.jpg">
+                <span class="nemo" style="left: 83%; top: 56%; width: 4.5%; height: 8%;"></span>
+                <span class="nemo" style="left: 51%; top: 29%; width: 24%; height: 27%;"></span>
+            </div>
+            </div>
+
+            <!-- 가린 것들: 네모로 가린 것은 네모로, 동그라미로 가린 것은 동그라미(class="gureum")로 오려 모은다 -->
+            <section class="garin">
+                <h2>가린 것들 · 23</h2>
+                <div class="garin-moeum">
+                <div class="jogak" style="width: 160px; height: 234px;">
+                    <img src="img/096.jpg" style="width: 760px; left: -319px; top: -51px;">
+                </div>
+                <div class="jogak" style="width: 42px; height: 68px;">
+                    <img src="img/096.jpg" style="width: 760px; left: -471px; top: -245px;">
+                </div>
+                <div class="jogak" style="width: 38px; height: 31px;">
+                    <img src="img/096.jpg" style="width: 760px; left: -483px; top: -211px;">
+                </div>
+                <div class="jogak" style="width: 118px; height: 222px;">
+                    <img src="img/177.jpg" style="width: 760px; left: -277px; top: -200px;">
+                </div>
+                <div class="jogak" style="width: 72px; height: 222px;">
+                    <img src="img/177.jpg" style="width: 760px; left: -137px; top: -108px;">
+                </div>
+                <div class="jogak" style="width: 30px; height: 48px;">
+                    <img src="img/177.jpg" style="width: 760px; left: -72px; top: -254px;">
+                </div>
+                <div class="jogak" style="width: 220px; height: 68px;">
+                    <img src="img/177.jpg" style="width: 760px; left: -144px; top: -502px;">
+                </div>
+                <div class="jogak" style="width: 53px; height: 57px;">
+                    <img src="img/062.jpg" style="width: 760px; left: -300px; top: -217px;">
+                </div>
+                <div class="jogak" style="width: 65px; height: 239px;">
+                    <img src="img/062.jpg" style="width: 760px; left: -448px; top: -182px;">
+                </div>
+                <div class="jogak" style="width: 103px; height: 217px;">
+                    <img src="img/182.jpg" style="width: 760px; left: -144px; top: -86px;">
+                </div>
+                <div class="jogak" style="width: 38px; height: 31px;">
+                    <img src="img/182.jpg" style="width: 760px; left: -72px; top: -410px;">
+                </div>
+                <div class="jogak" style="width: 80px; height: 154px;">
+                    <img src="img/035.jpg" style="width: 760px; left: -274px; top: -86px;">
+                </div>
+                <div class="jogak" style="width: 106px; height: 171px;">
+                    <img src="img/035.jpg" style="width: 760px; left: -144px; top: -399px;">
+                </div>
+                <div class="jogak gureum" style="width: 30px; height: 23px;">
+                    <img src="img/035.jpg" style="width: 760px; left: -334px; top: -23px;">
+                </div>
+                <div class="jogak" style="width: 68px; height: 285px;">
+                    <img src="img/009.jpg" style="width: 760px; left: -346px; top: -188px;">
+                </div>
+                <div class="jogak gureum" style="width: 30px; height: 23px;">
+                    <img src="img/009.jpg" style="width: 760px; left: -361px; top: -63px;">
+                </div>
+                <div class="jogak gureum" style="width: 34px; height: 23px;">
+                    <img src="img/009.jpg" style="width: 760px; left: -635px; top: -48px;">
+                </div>
+                <div class="jogak" style="width: 38px; height: 125px;">
+                    <img src="img/169.jpg" style="width: 760px; left: -521px; top: -194px;">
+                </div>
+                <div class="jogak" style="width: 23px; height: 34px;">
+                    <img src="img/169.jpg" style="width: 760px; left: -688px; top: -288px;">
+                </div>
+                <div class="jogak gureum" style="width: 27px; height: 23px;">
+                    <img src="img/169.jpg" style="width: 760px; left: -194px; top: -51px;">
+                </div>
+                <div class="jogak gureum" style="width: 27px; height: 23px;">
+                    <img src="img/169.jpg" style="width: 760px; left: -277px; top: -51px;">
+                </div>
+                <div class="jogak" style="width: 34px; height: 46px;">
+                    <img src="img/089.jpg" style="width: 760px; left: -631px; top: -319px;">
+                </div>
+                <div class="jogak" style="width: 182px; height: 154px;">
+                    <img src="img/089.jpg" style="width: 760px; left: -388px; top: -165px;">
+                </div>
+                </div>
+            </section>
+        </main>
+
+    </section>
+    <!-- ============================== 지하주차장 ============================== -->
+    <section id="juchajang" class="p-juchajang">
+        <!-- 이 페이지의 방식: 잘라내기(확대·강조) + 모으기 — 왼쪽에는 '나가는 곳' 표지판 하나만 크게 잘라 두고, 오른쪽에는 초록 불빛의 주차장 위에 다른 주차장 사진들의 불빛만 오려 모은다 -->
+        <main class="du-pan">
+            <!-- 왼쪽 판: 하나만 크게 -->
+            <div class="pan-hana">
+                <div class="jogak" style="width: 578px; height: 520px;">
+                    <img src="img/063.jpg" style="width: 1444px; left: -318px; top: 0px;">
+                </div>
+            </div>
+
+            <!-- 오른쪽 판: 바탕 사진 + 오려 낸 불빛 조각들 (조각 위치는 판 왼쪽 위에서부터 px) -->
+            <div class="pan-moeum">
+                <img class="batang" src="img/047.jpg">
+                <div class="jogak" style="width: 134px; height: 110px; left: 40px; top: 40px;">
+                    <img src="img/046.jpg" style="width: 1222px; left: -672px; top: -238px;">
+                </div>
+                <div class="jogak" style="width: 295px; height: 90px; left: 300px; top: 30px;">
+                    <img src="img/071.jpg" style="width: 923px; left: 0px; top: -291px;">
+                </div>
+                <div class="jogak" style="width: 206px; height: 120px; left: 480px; top: 110px;">
+                    <img src="img/049.jpg" style="width: 1143px; left: -137px; top: -309px;">
+                </div>
+                <div class="jogak" style="width: 80px; height: 150px; left: 70px; top: 210px;">
+                    <img src="img/046.jpg" style="width: 1000px; left: -720px; top: -315px;">
+                </div>
+                <div class="jogak" style="width: 144px; height: 100px; left: 220px; top: 170px;">
+                    <img src="img/048.jpg" style="width: 1026px; left: -369px; top: -231px;">
+                </div>
+                <div class="jogak" style="width: 117px; height: 80px; left: 400px; top: 260px;">
+                    <img src="img/070.jpg" style="width: 1067px; left: -501px; top: -320px;">
+                </div>
+                <div class="jogak" style="width: 156px; height: 130px; left: 520px; top: 330px;">
+                    <img src="img/050.jpg" style="width: 867px; left: -711px; top: -260px;">
+                </div>
+                <div class="jogak" style="width: 73px; height: 110px; left: 210px; top: 330px;">
+                    <img src="img/045.jpg" style="width: 1467px; left: -836px; top: -528px;">
+                </div>
+                <div class="jogak" style="width: 104px; height: 140px; left: 330px; top: 380px;">
+                    <img src="img/199.jpg" style="width: 1037px; left: -539px; top: -156px;">
+                </div>
+                <div class="jogak" style="width: 56px; height: 70px; left: 90px; top: 440px;">
+                    <img src="img/063.jpg" style="width: 933px; left: -803px; top: -490px;">
+                </div>
+                <div class="jogak" style="width: 110px; height: 45px; left: 540px; top: 455px;">
+                    <img src="img/045.jpg" style="width: 1000px; left: -220px; top: -503px;">
+                </div>
+            </div>
+        </main>
+
+        <!-- 아래로 내리면: 위의 두 판에 쓴 원본 사진들 -->
+        <section class="garin">
+            <h2>원본 사진 · 10</h2>
+            <div class="geurid">
+                <img class="wonbon" src="img/063.jpg">
+                <img class="wonbon" src="img/047.jpg">
+                <img class="wonbon" src="img/046.jpg">
+                <img class="wonbon" src="img/071.jpg">
+                <img class="wonbon" src="img/049.jpg">
+                <img class="wonbon" src="img/048.jpg">
+                <img class="wonbon" src="img/070.jpg">
+                <img class="wonbon" src="img/050.jpg">
+                <img class="wonbon" src="img/045.jpg">
+                <img class="wonbon" src="img/199.jpg">
+            </div>
+        </section>
+
+    </section>
+    <!-- ============================== 멈춘 놀이터 ============================== -->
+    <section id="noriteo" class="p-noriteo">
+        <!-- 이 페이지의 방식: 구획 나누기 — 놀이공원과 키즈카페 사진에서 지붕, 벽, 바닥이 될 부분을 오려 겹치지 않게 쌓아, 아무도 없는 하나의 놀이 공간처럼 짓는다. 아래로 내리면 원본 사진 -->
+        <!-- class="gonggan"(공간) — 판의 비율을 고정하고, 조각의 위치·크기를 모두 %로 적었다.
+             그래서 화면 폭이 바뀌어도 조각끼리 겹치지 않고 같은 틈을 유지한다.
+             class="gureum"(구름)이 붙은 조각은 동그랗게 오린다 -->
+        <main class="gonggan-teul">
+            <div class="gonggan" style="aspect-ratio: 1200 / 839;">
+                <!-- 지붕 -->
+                <div class="jogak" style="left: 0.00%; top: 0.00%; width: 44.07%; height: 14.19%;">
+                    <img src="img/143.jpg" style="width: 100.0%; left: -0.0%; top: -0.0%;">
+                </div>
+                <div class="jogak" style="left: 44.91%; top: 0.00%; width: 55.09%; height: 14.19%;">
+                    <img src="img/165.jpg" style="width: 100.0%; left: -0.0%; top: -0.0%;">
+                </div>
+                <!-- 벽 -->
+                <div class="jogak" style="left: 0.00%; top: 15.38%; width: 49.07%; height: 36.69%;">
+                    <img src="img/146.jpg" style="width: 151.5%; left: -27.3%; top: -13.0%;">
+                </div>
+                <div class="jogak gureum" style="left: 49.90%; top: 15.38%; width: 25.78%; height: 36.69%;">
+                    <img src="img/112.jpg" style="width: 204.1%; left: -26.5%; top: -23.1%;">
+                </div>
+                <div class="jogak" style="left: 76.51%; top: 15.38%; width: 23.49%; height: 36.69%;">
+                    <img src="img/150.jpg" style="width: 175.4%; left: -8.8%; top: -18.1%;">
+                </div>
+                <div class="jogak" style="left: 0.00%; top: 53.26%; width: 19.22%; height: 16.49%;">
+                    <img src="img/148.jpg" style="width: 125.0%; left: -18.8%; top: -12.5%;">
+                </div>
+                <div class="jogak gureum" style="left: 20.05%; top: 53.26%; width: 11.39%; height: 16.49%;">
+                    <img src="img/120.jpg" style="width: 500.0%; left: -125.0%; top: -148.1%;">
+                </div>
+                <div class="jogak" style="left: 32.27%; top: 53.26%; width: 36.15%; height: 16.49%;">
+                    <img src="img/145.jpg" style="width: 114.9%; left: -9.2%; top: -67.6%;">
+                </div>
+                <div class="jogak" style="left: 69.25%; top: 53.26%; width: 30.75%; height: 16.49%;">
+                    <img src="img/141.jpg" style="width: 100.0%; left: -0.0%; top: -90.0%;">
+                </div>
+                <!-- 바닥 -->
+                <div class="jogak" style="left: 0.00%; top: 70.94%; width: 49.24%; height: 29.06%;">
+                    <img src="img/140.jpg" style="width: 100.0%; left: -0.0%; top: -81.8%;">
+                </div>
+                <div class="jogak" style="left: 50.08%; top: 70.94%; width: 22.01%; height: 29.06%;">
+                    <img src="img/144.jpg" style="width: 153.8%; left: -30.8%; top: -25.0%;">
+                </div>
+                <div class="jogak" style="left: 72.92%; top: 70.94%; width: 27.08%; height: 29.06%;">
+                    <img src="img/165.jpg" style="width: 172.4%; left: -0.0%; top: -72.4%;">
+                </div>
+            </div>
+        </main>
+
+        <!-- 아래로 내리면: 조각을 오려 온 원본 사진들 -->
+        <section class="garin">
+            <h2>원본 사진 · 11</h2>
+            <div class="geurid">
+                <img class="wonbon" src="img/143.jpg">
+                <img class="wonbon" src="img/165.jpg">
+                <img class="wonbon" src="img/146.jpg">
+                <img class="wonbon" src="img/112.jpg">
+                <img class="wonbon" src="img/150.jpg">
+                <img class="wonbon" src="img/148.jpg">
+                <img class="wonbon" src="img/120.jpg">
+                <img class="wonbon" src="img/145.jpg">
+                <img class="wonbon" src="img/141.jpg">
+                <img class="wonbon" src="img/140.jpg">
+                <img class="wonbon" src="img/144.jpg">
+            </div>
+        </section>
+
+    </section>
+</body>
+</html>
